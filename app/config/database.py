@@ -26,5 +26,5 @@ def get_db():
     except Exception as erro:
         db.rollback() # Se der errado, desfaz a operação
         raise erro # lança a exceção, informando o erro.
-    finnaly:
-    db.close() # garante o fechamento da sessão
+    finally:
+        db.close() # garante o fechamento da sessão
